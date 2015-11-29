@@ -1,9 +1,8 @@
 
 var UI = require('ui');
 
-
-
 var haveHWList = [0,2,1,1,0,0,0,0];
+var selectedSubject = 0;
 
 var subjectList = [
   {
@@ -52,19 +51,20 @@ var Menu = new UI.Menu({
 Menu.show();
 // Add a click listener for select button click
 Menu.on('select', function(event) {
-
-  
-  console.log(event);
+  //selectedSubject=event.itemIndex;
   // Show a card with clicked item details
   var detailCard = new UI.Card({  
-    
       title:'press up to add ',
     subtitle:'press down to subtract'
- 
   });
+  
   // Show the new Card
+  //detailCard.on('click','up',function(event){
+  // console.log("Last selcted subject is"+ String(selectedSubject)); 
+   //haveHWList[selectedSubject] +=1; 
+   //console.log("........HW count is"+ String(haveHWList[selectedSubject]));
+  //});
+    
   detailCard.show();
 });
-  Menu.on('up',function(event){
-   haveHWList +=1 
-  });    
+  
