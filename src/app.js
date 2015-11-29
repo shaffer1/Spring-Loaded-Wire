@@ -51,7 +51,7 @@ var Menu = new UI.Menu({
 Menu.show();
 // Add a click listener for select button click
 Menu.on('select', function(event) {
-  //selectedSubject=event.itemIndex;
+   selectedSubject=event.itemIndex;
   // Show a card with clicked item details
   var detailCard = new UI.Card({  
       title:'press up to add ',
@@ -59,11 +59,17 @@ Menu.on('select', function(event) {
   });
   
   // Show the new Card
-  //detailCard.on('click','up',function(event){
-  // console.log("Last selcted subject is"+ String(selectedSubject)); 
-   //haveHWList[selectedSubject] +=1; 
-   //console.log("........HW count is"+ String(haveHWList[selectedSubject]));
-  //});
+  detailCard.on('click','up',function(event){
+   console.log("Last selcted subject is "+ String(selectedSubject)); 
+   haveHWList[selectedSubject] +=1; 
+   console.log("........HW count is"+ String(haveHWList[selectedSubject]));
+   //subjectList[selectedSubject].subtitle= String(haveHWList[selectedSubject]);
+  });
+  detailCard.on('click','down',function(event){
+   console.log("Last selcted subject is "+ String(selectedSubject)); 
+   haveHWList[selectedSubject] -=1; 
+   console.log("........HW count is"+ String(haveHWList[selectedSubject]));
+  });
     
   detailCard.show();
 });
