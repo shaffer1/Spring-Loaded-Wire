@@ -1,7 +1,7 @@
 
 var UI = require('ui');
 
-var haveHWList = [0,2,1,1,0,0,0,0];
+var haveHWList = [0,0,0,0,0,0,0,0];
 var selectedSubject = 0;
 
 var subjectList = [
