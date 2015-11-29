@@ -63,12 +63,13 @@ Menu.on('select', function(event) {
    console.log("Last selcted subject is "+ String(selectedSubject)); 
    haveHWList[selectedSubject] +=1; 
    console.log("........HW count is"+ String(haveHWList[selectedSubject]));
-   //subjectList[selectedSubject].subtitle= String(haveHWList[selectedSubject]);
+   subjectList[selectedSubject].subtitle= String(haveHWList[selectedSubject]);
   });
   detailCard.on('click','down',function(event){
    console.log("Last selcted subject is "+ String(selectedSubject)); 
    haveHWList[selectedSubject] -=1; 
    console.log("........HW count is"+ String(haveHWList[selectedSubject]));
+   subjectList[selectedSubject].subtitle= String(haveHWList[selectedSubject]);
   });
     
   detailCard.show();
